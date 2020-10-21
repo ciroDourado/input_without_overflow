@@ -26,3 +26,5 @@ So, in light of all this, the only thing we must pursue is to get the stdin poin
 The only thing needed here is a loop which calls getchar until the last character reached is ENTER/'\n'. Since we try this after every call to stdin, this buffer is "cleaned" up to wait for another call, without any overflow.
 
 The code is very simple, the only thing we should worry at this point is to guarantee that the string given to any read function is properly formatted.
+
+So, that's it: no dinamically allocated memory, no raw mode of input, nothing more; just a simple manipulation of stdin.
